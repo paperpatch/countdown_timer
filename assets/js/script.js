@@ -1,28 +1,34 @@
 const NEW_YEAR = "1 Jan 2022"
 
+const daysEl = document.getElementById("days")
+const hoursEl = document.getElementById("hours")
+const minutesEl = document.getElementById("minutes")
+const secondsEl = document.getElementById("seconds")
+
 function countdown() {
-  const newYearsDate = new Date(NEW_YEAR);
-  const currentDate = new Date();
+  var newYearsDate = new Date(NEW_YEAR);
+  var currentDate = new Date();
 
-  const diff = new Date(newYearsDate - currentDate);
+  // results in milliseconds. divide by 1000 to get seconds
+  var totalSeconds = new Date(newYearsDate - currentDate) / 1000;
 
-  console.log(diff.getHours())
-  var timedifference = new years date - current date
+  var days = Math.floor(totalSeconds / 86400);
+  var hours = Math.floor(totalSeconds / 3600) % 24;
+  var minutes = Math.floor(totalSeconds / 60) % 60;
+  var seconds = Math.floor(totalSeconds) % 60;
+
+  daysEl.innerHTML = days;
+  hoursEl.innerHTML = hours;
+  minutesEl.innerHTML = minutes;
+  secondsEl.innerHTML = seconds;
+
+  console.log(days);
+  console.log(hours);
+  console.log(minutes);
+  console.log(seconds);
+  // console.log(minutes);
 
 }
 
-    
-
-
-/*
-  go through each time
-  define months, days, hours, minutes and seconds in time.
-
-  getElementbyId("") months
-  getElementbyId("") days
-  getElementbyId("") hours
-  getElementbyId("") minutes
-  getElementbyId("") seconds
-  
-  set .text() for each one
-  */
+countdown();
+setInterval(countdown, 1000);
