@@ -43,6 +43,6 @@ h1:hover, .col:hover {
 
 h1:hover, p:hover {
   text-shadow:
-    4px 4px 4px #fff,  /* inner white */
-    3px 3px 3px #0ff; /* outer cyan */
+    2px 2px 5px #fff,  /* inner white */
+    2px 2px 4px #0ff; /* outer cyan */
 }
