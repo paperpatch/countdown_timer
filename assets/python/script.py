@@ -1,11 +1,23 @@
-from datetime import datetime
+import time
+import datetime
 
-current = datetime.now()
-print("current time = ", current)
+NEW_YEAR = datetime.datetime(2022, 1, 1)
+# check if date passed the new year. 
+DELTA = datetime.timedelta(microseconds=-0.0000000001)
 
-def countdown(time):
-  while time:
-    min
+#repeat
+while True:
+  time_until_new_year = NEW_YEAR - datetime.datetime.now()
+
+  if time_until_new_year < DELTA:
+    print("Happy New Year!!!")
+    break
+  else:
+    print(time_until_new_year)
+
+  # wait until 1 second before repeating
+  time.sleep(1)
+
 
 
 # Get New Years Date in time
