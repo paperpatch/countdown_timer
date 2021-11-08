@@ -16,11 +16,11 @@ main {
 }
 
 h1 {
-  padding: 7vh;
+  padding: 5vh;
 }
 
-.big-text {
-  font-size: 6rem;
+p {
+  font-size: 5rem;
   line-height: 1.5;
   margin: 0 auto;
 }

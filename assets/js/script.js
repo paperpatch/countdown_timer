@@ -12,22 +12,20 @@ function countdown() {
   // results in milliseconds. divide by 1000 to get seconds
   var totalSeconds = new Date(newYearsDate - currentDate) / 1000;
 
-  var days = Math.floor(totalSeconds / 86400);
+  var days = Math.floor(totalSeconds / 3600 / 24);
   var hours = Math.floor(totalSeconds / 3600) % 24;
   var minutes = Math.floor(totalSeconds / 60) % 60;
   var seconds = Math.floor(totalSeconds) % 60;
 
   daysEl.innerHTML = days;
-  hoursEl.innerHTML = hours;
-  minutesEl.innerHTML = minutes;
-  secondsEl.innerHTML = seconds;
+  hoursEl.innerHTML = formatTime(hours);
+  minutesEl.innerHTML = formatTime(minutes);
+  secondsEl.innerHTML = formatTime(seconds);
+}
 
-  console.log(days);
-  console.log(hours);
-  console.log(minutes);
-  console.log(seconds);
-  // console.log(minutes);
-
+// If time is less than 10, add a '0' digit in front of it.
+function formatTime(time) {
+  return time < 10 ? (`0${time}`) : time;
 }
 
 countdown();
