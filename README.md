@@ -1,10 +1,10 @@
 # COUNTDOWN TIMER
 
-## CONTENTS OF THIS FILE
+## TABLE OF CONTENTS
 
-* Introduction
-* Deployment
-* Contribution
+* [Introduction](#introduction)
+* [Deployment](#deployment)
+* [Contribution](#contribution)
 
 ## INTRODUCTION
 
